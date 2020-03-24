@@ -1,4 +1,4 @@
-import { FETCH_AUTHORS } from "./actionTypes";
+import { FETCH_AUTHORS ,FILTER_AUTHORS } from "./actionTypes";
 
 import axios from "axios";
 
@@ -14,7 +14,7 @@ export const fetchAuthors = () => async dispatch => {
 
 export const filterAuthors = query => {
   return {
-    type: actionTypes.FILTER_AUTHORS,
+    type: FILTER_AUTHORS,
     payload: query
   };
 };

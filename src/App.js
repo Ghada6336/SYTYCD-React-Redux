@@ -8,7 +8,7 @@ import AuthorsList from "./AuthorsList";
 import AuthorDetail from "./AuthorDetail";
 
 import { connect } from "react-redux";
-import { fetchAllAuthors } from "./redux/actions";
+import { fetchAuthors } from "./redux/actions";
 
 class App extends Component {
   componentDidMount() {
@@ -52,7 +52,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAllAuthors: () => dispatch(actionCreators.fetchAuthors())
+    fetchAllAuthors: () => dispatch(fetchAuthors())
   };
 };
 

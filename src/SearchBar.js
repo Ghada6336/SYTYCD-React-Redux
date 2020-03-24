@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +12,7 @@ const SearchBar = ({ filterAuthors }) => (
       <input
         className="form-control"
         type="text"
-        onChange={() => filterAuthors(event.target.value)}
+        onChange={(event) => filterAuthors(event.target.value)}
       />
       <div className="input-group-append">
         <span className="input-group-text">

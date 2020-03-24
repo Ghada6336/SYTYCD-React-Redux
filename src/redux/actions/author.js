@@ -1,4 +1,4 @@
-import {FETCH_AUTHORS} from "./actionTypes";
+import { FETCH_AUTHOR_DETAIL} from "./actionTypes";
 
 import axios from "axios";
 
@@ -8,6 +8,6 @@ const instance = axios.create({
 
 export const fetchAuthorDetail = authorID => async dispatch => {
   const res = await instance.get(`/api/authors/${authorID}`);
-  const author;
+  const author = res.data;;
   dispatch({ type: FETCH_AUTHOR_DETAIL, payload: author });
 };

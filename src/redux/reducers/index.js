@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import authorReducer from "./redux/reducers/author";
-import authorsReducer from "./redux/reducers/authors";
+import authorReducer from "./author";
+import authorsReducer from "./authors";
 
 const rootReducer = combineReducers({
   rootAuthor: authorReducer,

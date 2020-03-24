@@ -14,7 +14,7 @@ const AuthorsList = ({ filteredAuthors }) => {
   return (
     <div className="authors">
       <h3>Authors</h3>
-      <SearchBar />
+      <SearchBar  onChange={filteredAuthors} />
       <div className="row">{authorCards}</div>
     </div>
   );
@@ -23,6 +23,7 @@ const AuthorsList = ({ filteredAuthors }) => {
 const mapStateToProps = state => {
   return {
     filteredAuthors: state.rootAuthors.filteredAuthors
+    // authors: state.authorsState.authors
   };
 };
 
